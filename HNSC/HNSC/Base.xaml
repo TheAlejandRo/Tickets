@@ -1,0 +1,146 @@
+﻿<Window x:Name="WN_Base" x:Class="Base"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:domain = " clr-namespace: MaterialDesignColors.WpfExample.Domain "
+        xmlns:local="clr-namespace:HNSC" mc:Ignorable="d" Height="500" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Inicio Dock-->
+        <materialDesign:ColorZone
+            Mode="Standard"
+            Padding="10"
+            CornerRadius="6"
+            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+            Margin="0,-3,0,0" Background="#FF0074FF" Grid.ColumnSpan="3" Height="40" Foreground="Black">
+            <StackPanel
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Orientation="Horizontal"
+                Margin="5,0,0,0"
+                Height="20" Width="400">
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="0 0 0 0"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Width="400" Height="25" Text="Módulo 1">
+                    <!--<TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.3"/>
+                    </TextBlock.Effect>-->
+                </TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <!--Inicio lista de clínicas-->
+        <ListView x:Name="list_clin"
+            Grid.Column="1" Margin="10,42,10,280" Background="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Segoe UI Semibold" SelectedIndex="0" IsSynchronizedWithCurrentItem="False">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+            <TextBlock>
+                Dr. Holguer
+            </TextBlock>
+            <TextBlock>
+                Dra. Del Sid
+            </TextBlock>
+        </ListView>
+        <!--Inicio Label "Clínica"-->
+        <Label x:Name="lb_clinica_cod"
+            Content="Clínica"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="25,40,0,0"
+            Height="35" Width="70" Grid.Column="1" Background="{x:Null}" Foreground="#FF0074FF" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Semibold">
+            <Label.Effect>
+                <DropShadowEffect Opacity="0.4" ShadowDepth="4"/>
+            </Label.Effect>
+        </Label>
+        <!--Inicio lista de códigos-->
+        <ListView x:Name="list_cod"
+                  Grid.Column="2"
+                  Margin="10,42,10,280"
+                  FontSize="12"
+                  FontFamily="Segoe UI Semibold"
+                  SelectedIndex="0"
+                  IsSynchronizedWithCurrentItem="True"
+                  Background="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="90"/>
+                </GridView>
+            </ListView.View>
+            <TextBlock><Run Text="H546"/></TextBlock>
+            <TextBlock><Run Text="H547"/></TextBlock>
+            <TextBlock><Run Text="H548"/></TextBlock>
+            <TextBlock><Run Text="H549"/></TextBlock>
+            <TextBlock><Run Text="H550"/></TextBlock>
+            <TextBlock><Run Text="H551"/></TextBlock>
+            <TextBlock><Run Text="S100"/></TextBlock>
+            <TextBlock><Run Text="S101"/></TextBlock>
+            <TextBlock><Run Text="S102"/></TextBlock>
+        </ListView>
+        <!--Inicio Label "Código"-->
+        <Label x:Name="lb_cod_user"
+            Content="Código"
+            VerticalAlignment="Top"
+            Margin="25,40,25,0" Grid.Column="2" Background="{x:Null}" Foreground="#FF0074FF" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Semibold" RenderTransformOrigin="0.444,0.562" Padding="5,0,5,5">
+            <Label.Effect>
+                <DropShadowEffect Opacity="0.4" ShadowDepth="4"/>
+            </Label.Effect>
+        </Label>
+        <Image x:Name="Img_view" HorizontalAlignment="Left" Height="432" Margin="0,37,0,0" VerticalAlignment="Top" Width="528"/>
+        <StackPanel Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Height="275"
+                    VerticalAlignment="Bottom">
+            <Label x:Name="lb_cod_pacient" Content="Código de Paciente"
+                   Background="{x:Null}"
+                   FontSize="26"
+                   Foreground="Black"
+                   Margin="14,0"
+                   VerticalAlignment="Top"/>
+            <Label x:Name="lb_number_code"
+                   Content="H545"
+                   Background="{x:Null}"
+                   FontSize="52"
+                   Foreground="#FF0074FF"
+                   Margin="14,10"
+                   FontWeight="Bold"
+                   BorderBrush="White"
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Label.Effect>
+                    <DropShadowEffect Opacity="0.4"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lb_clinic_dr" Content="Clínica del Doctor(a)"
+                Background="{x:Null}"
+                FontSize="26"
+                Foreground="Black"
+                Margin="14,0"/>
+            <Label x:Name="lb_dr_clinic"
+                Content="Dr. Holguer"
+                Background="{x:Null}"
+                FontSize="40"
+                Foreground="#FF0074FF"
+                Margin="14.5,5"
+                FontWeight="Bold"
+                BorderBrush="White"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Label.Effect>
+                    <DropShadowEffect Opacity="0.4"/>
+                </Label.Effect>
+            </Label>
+        </StackPanel>
+
+    </Grid>
+</Window>
