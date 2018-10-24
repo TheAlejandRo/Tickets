@@ -1,11 +1,12 @@
-﻿<Window x:Name="WN_Base" x:Class="Base"
+﻿<Window
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:domain = " clr-namespace: MaterialDesignColors.WpfExample.Domain "
-        xmlns:local="clr-namespace:HNSC" mc:Ignorable="d" Height="500" Width="800">
+        xmlns:local="clr-namespace:HNSC" xmlns:awe="http://schemas.awesomium.com/winfx" x:Name="WN_Base" x:Class="Base"
+        mc:Ignorable="d" Height="500" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*"/>
@@ -13,32 +14,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <!--Inicio Dock-->
-        <materialDesign:ColorZone
-            Mode="Standard"
-            Padding="10"
-            CornerRadius="6"
-            materialDesign:ShadowAssist.ShadowDepth="Depth3"
-            Margin="0,-3,0,0" Background="#FF0074FF" Grid.ColumnSpan="3" Height="40" Foreground="Black">
-            <StackPanel
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Orientation="Horizontal"
-                Margin="5,0,0,0"
-                Height="20" Width="400">
-                <TextBlock
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Margin="0 0 0 0"
-                    FontSize="18"
-                    FontWeight="Bold"
-                    Foreground="White"
-                    Width="400" Height="25" Text="Módulo 1">
-                    <!--<TextBlock.Effect>
-                        <DropShadowEffect Opacity="0.3"/>
-                    </TextBlock.Effect>-->
-                </TextBlock>
-            </StackPanel>
-        </materialDesign:ColorZone>
         <!--Inicio lista de clínicas-->
         <ListView x:Name="list_clin"
             Grid.Column="1" Margin="10,42,10,280" Background="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Segoe UI Semibold" SelectedIndex="0" IsSynchronizedWithCurrentItem="False">
@@ -47,12 +22,8 @@
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
-            <TextBlock>
-                Dr. Holguer
-            </TextBlock>
-            <TextBlock>
-                Dra. Del Sid
-            </TextBlock>
+            <TextBlock><Run Text="Dr. Holguer"/></TextBlock>
+            <TextBlock><Run Text="Dra. Del Sid"/></TextBlock>
         </ListView>
         <!--Inicio Label "Clínica"-->
         <Label x:Name="lb_clinica_cod"
@@ -98,7 +69,6 @@
                 <DropShadowEffect Opacity="0.4" ShadowDepth="4"/>
             </Label.Effect>
         </Label>
-        <Image x:Name="Img_view" HorizontalAlignment="Left" Height="432" Margin="0,37,0,0" VerticalAlignment="Top" Width="528"/>
         <StackPanel Grid.Column="1"
                     Grid.ColumnSpan="2"
                     Height="275"
@@ -141,6 +111,33 @@
                 </Label.Effect>
             </Label>
         </StackPanel>
+        <WebBrowser x:Name="View_Line" Margin="0,37,0,0" Source="https://www.youtube.com"/>
+        <materialDesign:ColorZone
+            Mode="Standard"
+            Padding="10"
+            CornerRadius="6"
+            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+            Margin="0,-3,0,0" Background="#FF0074FF" Grid.ColumnSpan="3" Height="40" Foreground="Black">
+            <StackPanel
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Orientation="Horizontal"
+                Margin="5,0,0,0"
+                Height="20" Width="400">
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="0 0 0 0"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Width="400" Height="25" Text="Módulo 1">
+<!--<TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.3"/>
+                    </TextBlock.Effect>-->
+                </TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
 
     </Grid>
 </Window>

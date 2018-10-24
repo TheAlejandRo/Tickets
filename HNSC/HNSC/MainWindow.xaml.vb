@@ -8,6 +8,12 @@
             Dim Base As New Base
             Base.Show()
             Me.Close()
+        ElseIf txt_user.Text = "mod2" And txt_pass.Password = "12345" Then
+            Dim Mod2 As New Mod2
+            Mod2.Show()
+            Me.Close()
+        Else
+            Me.Close()
         End If
     End Sub
 End Class
