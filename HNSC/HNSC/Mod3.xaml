@@ -1,4 +1,5 @@
 ﻿<Window x:Class="Mod3"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,5 +12,43 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <TextBlock
+            Grid.Column="1"
+            Margin="134,70,134,0"
+            TextWrapping="Wrap" VerticalAlignment="Top"
+            FontSize="40" FontFamily="Segoe UI Semibold" Foreground="#FF0078D7"
+            Text="Doctores">
+            <TextBlock.Effect>
+                <DropShadowEffect Direction="270" Opacity="0.3" ShadowDepth="3"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <materialDesign:ColorZone
+            Mode="Accent"
+            Padding="16"
+            Grid.ColumnSpan="2"
+            CornerRadius="6"
+            Margin="0,-4,0,0">
+            <DockPanel>
+                <materialDesign:PopupBox
+                    DockPanel.Dock="Right"
+                    PlacementMode="BottomAndAlignRightEdges">
+                    <ListBox>
+                        <ListBoxItem Content="Ajustes"/>
+                        <ListBoxItem Content="Salir"/>
+                    </ListBox>
+                </materialDesign:PopupBox>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <ToggleButton
+                        Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Margin="16 0 0 0"
+                        Text="Generación de Ticket"
+                        FontSize="28" >
+                    </TextBlock>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
     </Grid>
 </Window>
