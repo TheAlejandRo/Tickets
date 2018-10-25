@@ -22,6 +22,15 @@
                 <DropShadowEffect Direction="270" Opacity="0.3" ShadowDepth="3"/>
             </TextBlock.Effect>
         </TextBlock>
+        <Button x:Name="btn_dr_h"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="0,0,200,200"
+            FontSize="20" FontFamily="Segoe UI Semibold">
+            Dr. Holguer
+        </Button>
         <materialDesign:ColorZone
             Mode="Accent"
             Padding="16"
@@ -50,5 +59,92 @@
                 </StackPanel>
             </DockPanel>
         </materialDesign:ColorZone>
+        <Button x:Name="btn_dr_h_Copy"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="253,164,53,365"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy1"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="53,224,253,305"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy2"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="253,224,53,305"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy3"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="53,284,253,245"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy4"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="253,284,53,245"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy5"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="53,342,253,187"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy6"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="253,342,53,187"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy7"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="53,400,253,129"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button x:Name="btn_dr_h_Copy8"
+            Style="{DynamicResource MaterialDesignRaisedButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1"
+            Height="40" Width="140"
+            Margin="253,400,53,129"
+            FontSize="20" FontFamily="Segoe UI Semibold" Content="Dr. Holguer"/>
+        <Button
+            Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+            Grid.Column="1" Margin="166,459,180,10" Height="100" Width="100" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Center" HorizontalAlignment="Center">
+            Imprimir
+        </Button>
+        <TextBlock
+            Margin="134,80,134,0"
+            TextWrapping="Wrap" VerticalAlignment="Top"
+            FontSize="40" FontFamily="Segoe UI Semibold" Foreground="#FF0078D7"
+            Text="Ticket" Width="110">
+            <TextBlock.Effect>
+                <DropShadowEffect Direction="270" Opacity="0.3" ShadowDepth="3"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock
+            Margin="125,268,134,0"
+            TextWrapping="Wrap" VerticalAlignment="Top"
+            FontSize="80" FontFamily="Segoe UI Semibold" Foreground="#FF0078D7"
+            Text="H545" Width="200" Height="110" HorizontalAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect Direction="270" Opacity="0.3" ShadowDepth="3"/>
+            </TextBlock.Effect>
+        </TextBlock>
     </Grid>
 </Window>

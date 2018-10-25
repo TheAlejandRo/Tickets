@@ -12,6 +12,10 @@
             Dim Mod2 As New Mod2
             Mod2.Show()
             Me.Close()
+        ElseIf txt_user.Text = "mod3" And txt_pass.Password = "123456" Then
+            Dim Mod3 As New Mod3
+            Mod3.Show()
+            Me.Close()
         Else
             Me.Close()
         End If
