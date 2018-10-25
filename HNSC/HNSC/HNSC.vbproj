@@ -117,6 +117,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mod3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Import Include="System.Threading.Tasks" />
@@ -140,6 +144,9 @@
   <ItemGroup>
     <Compile Include="Mod2.xaml.vb">
       <DependentUpon>Mod2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mod3.xaml.vb">
+      <DependentUpon>Mod3.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb">
       <SubType>Code</SubType>
