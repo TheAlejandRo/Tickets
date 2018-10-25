@@ -6,8 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HNSC"
         xmlns:awe="http://schemas.awesomium.com/winfx" x:Name="Módulo2" x:Class="Mod2"
-        mc:Ignorable="d" Height="450" Width="800">
-    <Grid>
+        mc:Ignorable="d" Height="550" Width="800" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+    <Grid ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -31,17 +31,83 @@
         <TextBlock
             TextAlignment="Center"
             VerticalAlignment="Top"
-            Margin="20,20,20,0"
+            Margin="20,70,20,0"
             Height="50"
             TextWrapping="Wrap"
-            FontSize="36" FontFamily= "Segoe UI Semibold"
-            Text="Lista de Pacientes"/>
-        <ListView Margin="50,118,90,93">
+            FontSize="36" FontFamily= "Segoe UI Semibold" Foreground="#FF0078D7"
+            Text="Lista de Pacientes">
+            <TextBlock.Effect>
+                <DropShadowEffect Opacity="0.4" Direction="270" ShadowDepth="3"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <ListView
+            x:Name="list_pacient_dr"
+            Margin="20,90,20,190"
+            Foreground="#E50078D7" SelectedIndex="0" IsSynchronizedWithCurrentItem="True"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+            FontSize="14" FontFamily="Segoe UI Semibold" FontWeight="Bold">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Width="500"/>
                 </GridView>
             </ListView.View>
+            <TextBlock Text="H546"/>
+            <TextBlock Text="H547"/>
+            <TextBlock Text="H548"/>
+            <TextBlock Text="H549"/>
+            <TextBlock Text="H550"/>
+            <TextBlock Text="H551"/>
         </ListView>
+        <materialDesign:ColorZone
+            Mode="Accent"
+            Padding="16" Grid.ColumnSpan="2"
+            CornerRadius="6"
+            VerticalAlignment="Top" Margin="0,-6,0,0" Height="73">
+            <DockPanel>
+                <materialDesign:PopupBox
+                    DockPanel.Dock="Right"
+                    PlacementMode="BottomAndAlignRightEdges">
+                    <ListBox>
+                        <ListBoxItem Content="Ajustes"/>
+                        <ListBoxItem Content="Salir"/>
+                    </ListBox>
+                </materialDesign:PopupBox>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <ToggleButton
+                        Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Margin="16 0 0 0"
+                        Text="Dr. Holguer Coronado"
+                        FontSize="22" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <TextBlock
+            TextAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="10,334,10,0"
+            Height="50"
+            TextWrapping="Wrap"
+            FontSize="36" FontFamily= "Segoe UI Semibold" Foreground="#FF0078D7"
+            Text="Paciente Actual">
+            <TextBlock.Effect>
+                <DropShadowEffect Opacity="0.4" Direction="270" ShadowDepth="3"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Label x:Name="lb_number_cod"
+            Content="H545"
+            Background="{x:Null}"
+            FontSize="52"
+            Foreground="#FF0074FF"
+            Margin="80,390,80,30"
+            FontWeight="Bold"
+            BorderBrush="White"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label.Effect>
+                <DropShadowEffect Opacity="0.4"/>
+            </Label.Effect>
+        </Label>
     </Grid>
 </Window>
