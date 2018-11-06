@@ -52,18 +52,6 @@ Partial Friend NotInheritable Class MySettings
             Return defaultInstance
         End Get
     End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("546")>  _
-    Public Property No_Ticket() As String
-        Get
-            Return CType(Me("No_Ticket"),String)
-        End Get
-        Set
-            Me("No_Ticket") = value
-        End Set
-    End Property
 End Class
 
 Namespace My

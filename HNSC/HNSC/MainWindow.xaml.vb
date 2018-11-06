@@ -1,4 +1,7 @@
-﻿Class MainWindow
+﻿Imports MySql.Data.MySqlClient
+
+Class MainWindow
+
     Private Sub btn_close_Click(sender As Object, e As RoutedEventArgs) Handles btn_close.Click
         Me.Close()
     End Sub
@@ -19,5 +22,15 @@
         Else
             Me.Close()
         End If
+    End Sub
+
+    Private Sub MainWindow_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
+        Dim bd_conetion As New MySqlConnection("host=127.0.0.1; user=root; database=hnsc")
+        Try
+            bd_conetion.Open()
+            MessageBox.Show("Wenas :v")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

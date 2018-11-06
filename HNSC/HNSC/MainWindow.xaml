@@ -8,7 +8,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HNSC"
         mc:Ignorable="d"
-        Title="Hospital Nuestra Señora del Carmen - Login" Height="500" Width="500" MinWidth="500" MinHeight="500" WindowStartupLocation="CenterScreen" MaxWidth="600" MaxHeight="600" WindowStyle="None" AllowsTransparency="True">
+        Title="Hospital Nuestra Señora del Carmen - Login" Height="400" Width="400" MinWidth="400" MinHeight="400" WindowStartupLocation="CenterScreen" MaxWidth="600" MaxHeight="600" WindowStyle="None" AllowsTransparency="True">
     <Grid>
         <!--Inicio del Dock-->
         <materialDesign:ColorZone
@@ -30,37 +30,27 @@
             </StackPanel>
         </materialDesign:ColorZone>
         <!--Final Dock-->
-        <Label x:Name="lb_Hospital" Content="Hospital" Margin="0,80,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="Black" FontFamily="Segoe UI Semibold" FontSize="48" Width="190" Height="75" FontWeight="Bold">
-            <Label.Effect>
-                <DropShadowEffect Opacity="0.3"/>
-            </Label.Effect>
-        </Label>
-        <Label x:Name="lb_nsc" Content="Nuestra Señora del Carmen" Margin="0,140,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="Black" FontFamily="Segoe UI Semibold" FontSize="36" Height="70" FontWeight="Bold" Width="460">
-            <Label.Effect>
-                <DropShadowEffect Opacity="0.3"/>
-            </Label.Effect>
-        </Label>
-        <Label x:Name="lb_user" Content="Usuario" Margin="0,0,150,220" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" FontSize="24" FontWeight="Bold" BorderBrush="Black" Background="{x:Null}" Width="100" Height="42">
+        <Label x:Name="lb_user" Content="Usuario" Margin="0,0,150,145" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" FontSize="24" FontWeight="Bold" BorderBrush="Black" Background="{x:Null}" Width="100" Height="42">
             <Label.Effect>
                 <DropShadowEffect Opacity="0.4"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="lb_pass" Content="Contraseña" Margin="0,0,185,170" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" FontSize="24" FontWeight="Bold" BorderBrush="Black" Background="{x:Null}" Width="138" Height="42">
+        <Label x:Name="lb_pass" Content="Contraseña" Margin="0,0,185,95" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" FontSize="24" FontWeight="Bold" BorderBrush="Black" Background="{x:Null}" Width="138" Height="42">
             <Label.Effect>
                 <DropShadowEffect Opacity="0.4"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="txt_user" Height="32" Margin="120,0,0,225" VerticalAlignment="Bottom" TextWrapping="Wrap" Width="150" Background="White" BorderBrush="#FF0078D7" Foreground="#E5000000" SelectionBrush="#990078D7" CaretBrush="#FF0078D7" FontSize="16" FontFamily="Segoe UI Semibold">
+        <TextBox x:Name="txt_user" Height="32" Margin="120,0,0,150" VerticalAlignment="Bottom" TextWrapping="Wrap" Width="150" Background="White" BorderBrush="#FF0078D7" Foreground="#E5000000" SelectionBrush="#990078D7" CaretBrush="#FF0078D7" FontSize="16" FontFamily="Segoe UI Semibold">
             <TextBox.Effect>
                 <DropShadowEffect Opacity="0.5"/>
             </TextBox.Effect>
         </TextBox>
-        <PasswordBox x:Name="txt_pass" Margin="120,0,0,175" VerticalAlignment="Bottom" Width="150" Height="32" FontSize="16" Background="White" BorderBrush="#FF0078D7" SelectionBrush="#990078D7" Foreground="#E5000000" FontFamily="Segoe UI Semibold" CaretBrush="#FF0078D7" RenderTransformOrigin="0.5,0.5">
+        <PasswordBox x:Name="txt_pass" Margin="120,0,0,100" VerticalAlignment="Bottom" Width="150" Height="32" FontSize="16" Background="White" BorderBrush="#FF0078D7" SelectionBrush="#990078D7" Foreground="#E5000000" FontFamily="Segoe UI Semibold" CaretBrush="#FF0078D7" RenderTransformOrigin="0.5,0.5">
             <PasswordBox.Effect>
                 <DropShadowEffect Opacity="0.5"/>
             </PasswordBox.Effect>
         </PasswordBox>
-        <Button x:Name="bt_sig" Content="Siguiente" Margin="0,0,0,90" VerticalAlignment="Bottom" Width="135" Height="42" FontFamily="Segoe UI Semibold" FontSize="22" Background="#FF0078D7" Foreground="White" BorderBrush="#FF0078D7" Padding="16,0,16,4">
+        <Button x:Name="bt_sig" Content="Siguiente" Margin="0,0,0,20" VerticalAlignment="Bottom" Width="135" Height="42" FontFamily="Segoe UI Semibold" FontSize="22" Background="#FF0078D7" Foreground="White" BorderBrush="#FF0078D7" Padding="16,0,16,4">
             <Button.Effect>
                 <DropShadowEffect Opacity="0.3"/>
             </Button.Effect>

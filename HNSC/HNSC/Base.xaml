@@ -4,10 +4,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:domain = " clr-namespace: MaterialDesignColors.WpfExample.Domain "
         xmlns:local="clr-namespace:HNSC" xmlns:awe="http://schemas.awesomium.com/winfx" x:Name="WN_Base" x:Class="Base"
         mc:Ignorable="d" Height="500" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="325*"/>
+            <RowDefinition Height="144*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition/>
@@ -16,7 +19,7 @@
         <!--Inicio Dock-->
         <!--Inicio lista de clínicas-->
         <ListView x:Name="list_clin"
-            Grid.Column="1" Margin="10,42,10,280" Background="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Segoe UI Semibold" SelectedIndex="0" IsSynchronizedWithCurrentItem="False">
+            Grid.Column="1" Margin="10,42,10,136" Background="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Segoe UI Semibold" SelectedIndex="0" IsSynchronizedWithCurrentItem="False">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -39,7 +42,7 @@
         <!--Inicio lista de códigos-->
         <ListView x:Name="list_cod"
                   Grid.Column="2"
-                  Margin="10,42,10,280"
+                  Margin="10,42,10,136"
                   FontSize="12"
                   FontFamily="Segoe UI Semibold"
                   SelectedIndex="0"
@@ -72,7 +75,7 @@
         <StackPanel Grid.Column="1"
                     Grid.ColumnSpan="2"
                     Height="275"
-                    VerticalAlignment="Bottom">
+                    VerticalAlignment="Bottom" Grid.RowSpan="2">
             <Label x:Name="lb_cod_pacient" Content="Código de Paciente"
                    Background="{x:Null}"
                    FontSize="26"
@@ -111,7 +114,6 @@
                 </Label.Effect>
             </Label>
         </StackPanel>
-        <WebBrowser x:Name="View_Line" Margin="0,37,0,0" Source="https://www.youtube.com"/>
         <materialDesign:ColorZone
             Mode="Standard"
             Padding="10"
