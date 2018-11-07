@@ -140,6 +140,7 @@
                 </TextBlock>
             </StackPanel>
         </materialDesign:ColorZone>
+        <WebBrowser x:Name="web_view" Margin="0,37,0,0" Source="https://www.youtube.com"/>
 
     </Grid>
 </Window>
